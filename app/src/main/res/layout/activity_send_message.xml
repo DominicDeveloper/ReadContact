@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".Send_Message">
+
+    <TextView
+        android:layout_marginStart="20dp"
+        android:id="@+id/send_message_name"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/layouttext"
+        app:layout_constraintBottom_toTopOf="@id/layouttext"
+        android:text="Contact name:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_marginStart="20dp"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        app:layout_constraintLeft_toRightOf="@id/send_message_name"
+        app:layout_constraintTop_toTopOf="parent"
+       android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@id/layouttext"
+        android:text="Number"
+        android:id="@+id/send_message_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="0dp"
+        android:textAlignment="textStart"
+        app:boxStrokeErrorColor="@color/black"
+        app:boxBackgroundColor="@color/white"
+        android:id="@+id/layouttext"
+        android:gravity="start"
+        app:layout_constraintHeight_percent="0.8"
+       app:layout_constraintTop_toBottomOf="@id/send_message_name"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:id="@+id/send_message_text"
+            android:hint="Enter your message"
+            android:gravity="start"
+            android:text=" "
+            android:textAlignment="textStart"
+            android:layout_height="match_parent"/>
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/send_message"
+        android:layout_margin="10dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layouttext"
+        android:backgroundTint="#03A9F4"
+        android:textColor="@color/white"
+        android:text="Send"
+        android:textColorHint="@color/white"
+        android:textAllCaps="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
